@@ -1,0 +1,390 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border-style: none;
+}
+
+/*  */
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;700&family=Epilogue:wght@300;500;700&display=swap");
+/* font-family: 'Andada Pro', serif;
+font-family: 'Epilogue', sans-serif; */
+:root {
+  /* colors */
+  --header: #0d2652;
+  --subheader: #5d7194;
+  --bg: #ffffff;
+  --modal-bg: #ffffff;
+  --accent-1: #0962ff;
+  --btn-bg: #f9fbff;
+  --border: rgb(193, 193, 193);
+  --shadow: rgba(20, 26, 44, 0.1);
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 300;
+}
+.blob {
+  position: relative;
+}
+
+.blob > svg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main article {
+  box-shadow: var(--shadow) 0px 3px 5px;
+  /* background-color: white; */
+  background-color: var(--bg);
+  padding: 3em 2.5em;
+  flex-direction: column;
+  display: flex;
+  border-radius: 2em;
+  flex: 1 0 auto;
+}
+
+article section {
+  height: 100%;
+  /* background-color: #ff3860; */
+}
+article > div {
+  /* background-color: gray; */
+  height: 13%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  font-family: "Andada Pro", serif;
+  /* background-color: #ff3860; */
+  gap: 1em;
+  padding-top: 2em;
+}
+
+.modal-header h1 {
+  font-weight: 600;
+  font-size: 3em;
+  color: var(--header);
+}
+
+.modal-header p {
+  color: var(--subheader);
+}
+
+.alt-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  padding: 1.5em 0 0 0;
+}
+
+.alt-log-btn {
+  /* background-color: #f0f0f0; */
+  padding: 1em;
+  border-radius: 1em;
+  width: 3.5em;
+  height: 3.5em;
+  color: var(--accent-1);
+  font-weight: 700;
+  font-size: 1em;
+  background-color: var(--bg);
+  box-shadow: var(--shadow) 0px 10px 50px;
+}
+
+form {
+  /* background-color: antiquewhite; */
+  height: 100%;
+}
+
+.input-control {
+  /* background-color: lightgreen; */
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control label {
+  padding: 1em 0 0.5em 1em;
+  color: var(--subheader);
+}
+
+.input-control input {
+  background-color: var(--btn-bg);
+  border: 1px solid var(--border);
+  border-radius: 1em;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 1.3em 1em;
+}
+
+.input-control input:hover,
+.input-control input:focus {
+  border-color: var(--accent-1);
+}
+
+.tos {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 0.6em;
+  height: 1em;
+  padding-left: 1em;
+  margin-top: 0.3em;
+}
+
+button[type="submit"] {
+  background-color: var(--accent-1);
+  padding: 1.5em 5em;
+  margin: 2em 0;
+  border-radius: 1em;
+  color: var(--bg);
+}
+button[type="submit"]:active {
+  transform: translateY(4px);
+}
+input[type="password"]::placeholder {
+  color: var(--subheader);
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+input[type="submit"] {
+  display: flex;
+  justify-content: baseline;
+}
+
+.tos {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in {
+  color: var(--subheader);
+  font-size: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-1);
+}
+
+.img-section {
+  opacity: 0;
+}
+@media (min-width: 900px) {
+  main article {
+    position: absolute;
+    width: clamp(150px, 30%, 40%);
+    top: 3%;
+    left: 15%;
+    display: flex;
+    box-shadow: var(--shadow) 0px 50px 100px -20px,
+      var(--shadow) 0px 30px 60px -30px;
+  }
+
+  .modal-header {
+    padding-top: 0em;
+  }
+
+  .two-items {
+    /* background-color: #0962ff; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+  .two-items div {
+    flex: 1 1 auto;
+  }
+  .two-items button {
+    flex: 1 1 auto;
+    text-align: left;
+    box-shadow: none;
+    border: 1px solid var(--border);
+    padding: 2em;
+    display: flex;
+    align-items: center;
+  }
+
+  .two-items button:nth-of-type(1)::after {
+    content: "Sign in with Google";
+    padding-left: 3.5em;
+    color: var(--subheader);
+    font-weight: 200;
+    font-size: 0.8em;
+  }
+  .two-items button:nth-of-type(2)::after {
+    content: "Sign in with Facebook";
+    padding-left: 3.5em;
+    color: var(--subheader);
+    font-weight: 200;
+    font-size: 0.8em;
+  }
+
+  .two-items button:active {
+    transform: translateY(4px);
+  }
+  .modal-header {
+    padding: 0 0 1em 0;
+  }
+
+  article section {
+    margin: 3em 0 0 0;
+  }
+}
